@@ -1,1 +1,18 @@
+No,Quantity,Comment,Designator,Footprint,Value,Manufacturer Part,Manufacturer,Supplier Part,Supplier,Price,URL
+1,1,ESP32-WROOM-32 module,U1,MOD-ESP32,ESP32-WROOM-32,ESP32-WROOM-32,Espressif,,,
+2,1,GY-PCM5102 I2S DAC module,U2,MOD-PCM5102,PCM5102,GY-PCM5102,,AliExpress,3.00$,https://www.aliexpress.com/item/1005001628079191.html
+3,2,RCA female connector (red/white),J1 J2,RCA-THT,RCA panel mount,,Generic,,1.20$,https://www.aliexpress.com/item/32810543041.html
+4,1,USB-A female connector,J3,USB-A-THT,USB-A,,Generic,,0.50$,https://www.aliexpress.com/item/1005003419919191.html
+5,1,MicroUSB female connector,J4,USB-MICRO-SMD,MicroUSB,,Generic,,0.40$,https://www.aliexpress.com/item/32849488932.html
+6,1,Pin header 2.54mm 1x8,J5,HEADER-1X08,Header 1x8,,Generic,,0.10$,
+7,1,Pin header 2.54mm 1x6,J6,HEADER-1X06,Header 1x6,,Generic,,0.10$,
+8,1,Pin header 2.54mm 1x4,J7,HEADER-1X04,Header 1x4,,Generic,,0.10$,
+9,1,Pin header 2.54mm 1x3,J8,HEADER-1X03,Header 1x3,,Generic,,0.10$,
+10,2,10k resistor,R1 R2,R_0805,10k,CR0805-10K,Uniroyal,C25804,LCSC,0.001$,
+11,1,1k resistor,R3,R_0805,1k,CR0805-1K,Uniroyal,C17513,LCSC,0.001$,
+12,1,100uF electrolytic capacitor,C1,CAP-TH-100UF,100uF,,Generic,,0.05$,
+13,2,10uF capacitor,C2 C3,C_0805,10uF,CL21A106KOQNNNE,Samsung,C19702,LCSC,0.02$,
+14,2,100nF capacitor,C4 C5,C_0805,100nF,CC0805KRX7R9BB104,Yageo,C49678,LCSC,0.002$,
+15,1,AMS1117-3.3 regulator,U3,SOT-223,AMS1117-3.3,AMS1117-3.3,Advanced Monolithic,C6186,LCSC,0.08$,
+16,1,RCA-RCA cable (external),CAB1,N/A,RCA cable,,Generic,,2.00$,
 

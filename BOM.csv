@@ -15,3 +15,4 @@ No,Quantity,Comment,Designator,Footprint,Value,Manufacturer Part,Manufacturer,Su
 14,2,100nF capacitor,C4 C5,C_0805,100nF,CC0805KRX7R9BB104,Yageo,C49678,LCSC,0.002$,
 15,1,AMS1117-3.3 regulator,U3,SOT-223,AMS1117-3.3,AMS1117-3.3,Advanced Monolithic,C6186,LCSC,0.08$,
 16,1,RCA-RCA cable (external),CAB1,N/A,RCA cable,,Generic,,2.00$,
+

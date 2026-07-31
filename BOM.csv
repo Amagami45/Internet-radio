@@ -1,13 +1,12 @@
 No,Quantity,Comment,Designator,Footprint,Value,Manufacturer Part,Manufacturer,Supplier Part,Supplier,Price,URL
 1,1,1uF,"C1",C0603,1uF,CL10A105KB8NNNC,SAMSUNG,C15849,LCSC,0.0874$,https://www.lcsc.com/product-detail/C15849.html?s_z=n_q_C15849&globalKeyword=C15849
 2,2,5.1k,"R1,R2",R0603,5.1k,0603WAF5101T5E,UNI-ROYAL,C23186,LCSC,0.0085$,https://www.lcsc.com/product-detail/C23186.html?s_z=n_q_C23186&globalKeyword=C23186
-3,3,"TYPE-C 16PIN 2MD(073)","USB1,USB2,USB3",USB-C-SMD_TYPE-C-16PIN-2MD-073,"TYPE-C 16PIN 2MD(073)","TYPE-C 16PIN 2MD(073)",SHOU HAN,C2765186,LCSC,0.0707$,https://www.lcsc.com/product-detail/C2765186.html?s_z=n_q_C2765186&globalKeyword=C2765186
-4,2,10.0 QHHTZB6.3,"USB4,USB5",USB-A-TH_10.0QHHTZB6.3,10.0 QHHTZB6.3,10.0 QHHTZB6.3,SHOU HAN,C668591,LCSC,0.0633$,https://www.lcsc.com/product-detail/C668591.html?s_z=n_q_C668591&globalKeyword=C668591
-5,1,3D Printed Case,CASE1,3D-PRINT,Custom,,Custom,,Self-made,,
-6,1,PCB Board,PCB1,PCB-2LAYER,Custom,,JLCPCB,,JLCPCB,,
-7,1,ESP32-WROOM-32 module,U2,MOD-ESP32,ESP32-WROOM-32,ESP32-WROOM-32,Espressif,,Generic,$3.50,https://www.espressif.com/en/products/modules/esp32
-8,1,GY-PCM5102 I2S DAC module,U3,MOD-PCM5102,PCM5102,PCM5102A,"Texas Instruments / Generic",GY-PCM5102,AliExpress,$3.00,https://www.aliexpress.com/item/1005001628079191.html
-9,2,"RCA female connector (red/white)","J1,J2",RCA-THT,RCA,,Generic,,AliExpress,$1.20,https://www.aliexpress.com/item/32810543041.html
-10,1,RCA-RCA cable (external),CAB1,N/A,RCA cable,,Generic,,Generic,$2.00,
+3,3,"TYPE-C 16PIN 2MD(073)","USB1",USB-C-SMD_TYPE-C-16PIN-2MD-073,"TYPE-C 16PIN 2MD(073)","TYPE-C 16PIN 2MD(073)",SHOU HAN,C2765186,LCSC,0.0707$,https://www.lcsc.com/product-detail/C2765186.html?s_z=n_q_C2765186&globalKeyword=C2765186
+4,1,3D Printed Case,CASE1,3D-PRINT,Custom,,Custom,,Self-made,,
+5,1,PCB Board,PCB1,PCB-2LAYER,Custom,,JLCPCB,,JLCPCB,,
+6,1,ESP32-WROOM-32 module,U2,MOD-ESP32,ESP32-WROOM-32,ESP32-WROOM-32,Espressif,,Generic,$3.50,https://www.espressif.com/en/products/modules/esp32
+7,1,GY-PCM5102 I2S DAC module,U3,MOD-PCM5102,PCM5102,PCM5102A,"Texas Instruments / Generic",GY-PCM5102,AliExpress,$3.00,https://www.aliexpress.com/item/1005001628079191.html
+8,2,"RCA female connector (red/white)","J1,J2",RCA-THT,RCA,,Generic,,AliExpress,$1.20,https://www.aliexpress.com/item/32810543041.html
+9,1,RCA-RCA cable (external),CAB1,N/A,RCA cable,,Generic,,Generic,$2.00,
 
 

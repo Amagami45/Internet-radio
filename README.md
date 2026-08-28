@@ -9,3 +9,5 @@ Than it's redukce to 3.3V by AMS1117. Most parts use 3.3V.
 I choosed 2.5 inch TFT display.
 ## Buttons
 I used cherry mx switches and rottary encoder.
+## Audio output
+It's done by dac i12c chip and by 2 RCA cinches, which connects to AIWA.

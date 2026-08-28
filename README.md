@@ -11,3 +11,5 @@ I choosed 2.5 inch TFT display.
 I used cherry mx switches and rottary encoder.
 ## Audio output
 It's done by dac i12c chip and by 2 RCA cinches, which connects to AIWA.
+## BOM 
+1 ESP32 wroom (with Bluetooth and WIFI)

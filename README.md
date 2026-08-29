@@ -14,4 +14,4 @@ It's done by dac i12c chip and by 2 RCA cinches, which connects to AIWA.
 ## BOM 
 1 ESP32 wroom (with Bluetooth and WIFI)
 ## License
-This work is under  license. More info in license file.
+This work is under GNU license. More info in license file.

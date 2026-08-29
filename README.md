@@ -13,8 +13,8 @@ I used cherry mx switches and rottary encoder.
 2. sleep/on
 3. up
 4. down
-encoder - volume up/ volume down 
-encoder button - sound off
+5. encoder - volume up/ volume down 
+6. encoder button - sound off
 ## Audio output
 It's done by dac i12c chip and by 2 RCA cinches, which connects to AIWA.
 ## BOM 

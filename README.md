@@ -9,10 +9,10 @@ Than it's redukce to 3.3V by AMS1117. Most parts use 3.3V.
 I choosed 2.5 inch TFT display.
 ## Buttons
 I used cherry mx switches and rottary encoder.
-1 resetovat button
-2 sleep/on
-3 up
-4 down
+1. resetovat button
+2. sleep/on
+3. up
+4. down
 encoder - volume up/ volume down 
 encoder button - sound off
 ## Audio output

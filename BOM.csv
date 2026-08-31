@@ -1,14 +1,25 @@
 No,Quantity,Comment,Designator,Footprint,Value,Manufacturer Part,Manufacturer,Supplier Part,Supplier,Price,URL
-1,1,1uF,"C1",C0603,1uF,CL10A105KB8NNNC,SAMSUNG,C15849,LCSC,0.0874$,https://www.lcsc.com/product-detail/C15849.html?s_z=n_q_C15849&globalKeyword=C15849
-2,2,5.1k,"R1,R2",R0603,5.1k,0603WAF5101T5E,UNI-ROYAL,C23186,LCSC,0.0085$,https://www.lcsc.com/product-detail/C23186.html?s_z=n_q_C23186&globalKeyword=C23186
-3,1,"TYPE-C 16PIN 2MD(073)","USB1",USB-C-SMD_TYPE-C-16PIN-2MD-073,"TYPE-C 16PIN 2MD(073)","TYPE-C 16PIN 2MD(073)",SHOU HAN,C2765186,LCSC,0.0707$,https://www.lcsc.com/product-detail/C2765186.html?s_z=n_q_C2765186&globalKeyword=C2765186
-4,1,3D Printed Case,CASE1,3D-PRINT,Custom,,Custom,,Self-made,,
-5,1,PCB Board,PCB1,PCB-2LAYER,Custom,,JLCPCB,,JLCPCB,,
-6,1,ESP32-WROOM-32 module,U2,MOD-ESP32,ESP32-WROOM-32,ESP32-WROOM-32,Espressif,,Generic,$3.50,https://www.espressif.com/en/products/modules/esp32
-7,1,GY-PCM5102 I2S DAC module,U3,MOD-PCM5102,PCM5102,PCM5102A,"Texas Instruments / Generic",GY-PCM5102,AliExpress,$3.00,https://www.aliexpress.com/item/1005001628079191.html
-8,2,"RCA female connector (red/white)","J1,J2",RCA-THT,RCA,,Generic,,AliExpress,$1.20,https://www.aliexpress.com/item/32810543041.html
-9,1,RCA-RCA cable (external),CAB1,N/A,RCA cable,,Generic,,Generic,$2.00,
-10,1,AMS1117 3.3V LDO Voltage Regulator,U3,SOT-223,AMS1117-3.3,AMS1117-3.3,"Advanced Monolithic Systems","",AliExpress,$0.50,""
-11,1,Micro SD card slot module,J3,MOD-MICROSD,Micro SD,"",Generic,"",AliExpress,$0.80,""
+1,1,ESP32 Wi-Fi/BT Module,U1,RF_Module:ESP32-WROOM-32,ESP32-WROOM-32,ESP32-WROOM-32E-N4,Espressif,C473012,LCSC,2.85$,https://www.lcsc.com/product-detail/WiFi-Modules_Espressif-Systems-ESP32-WROOM-32E-N4_C473012.html
+2,1,3.3V LDO Voltage Regulator,U2,Package_TO_SOT_SMD:SOT-223-3_TabPin2,AMS1117-3.3,AMS1117-3.3,AMS,C6186,LCSC,0.12$,https://www.lcsc.com/product-detail/Linear-Voltage-Regulators-LDO_AMS-Advanced-Monolithic-Systems-AMS1117-3-3_C6186.html
+3,1,I2S Audio DAC Chip,U3,Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,PCM5102A,PCM5102AIPWR,Texas Instruments,C67139,LCSC,1.80$,https://www.lcsc.com/product-detail/Audio-Processors-DACS-MDS_Texas-Instruments-PCM5102AIPWR_C67139.html
+4,1,TFT Display Screen,U4,Display:CR2013-MI2120,CR2013-MI2120,CR2013-MI2120,Generic,Custom,AliExpress,2.50$,http://pan.baidu.com/s/11Y990
+5,1,USB-to-UART Bridge,U5,Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm,CP2102N-Axx-xQFN24,CP2102N-A02-GQFN24R,Silicon Labs,C141118,LCSC,1.20$,https://www.lcsc.com/product-detail/USB-IC_Silicon-Labs-CP2102N-A02-GQFN24R_C141118.html
+6,2,NPN Transistor,"Q1, Q2",Package_TO_SOT_SMD:SOT-23,BC847,BC847B,Nexperia,C2131,LCSC,0.02$,https://www.lcsc.com/product-detail/Bipolar-Transistors-BJT_Nexperia-BC847B-215_C2131.html
+7,1,USB-C Receptacle 16P,J1,Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12,TYPE-C 16PIN 2MD(073),TYPE-C 16PIN 2MD(073),SHOU HAN,C2765186,LCSC,0.08$,https://www.lcsc.com/product-detail/C2765186.html
+8,1,Micro SD Card Slot,J2,Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5,Micro_SD_Card,DM3AT-SF-PEJM5,Hirose,C114219,LCSC,0.40$,https://www.we-online.com/components/products/datasheet/693072010801.pdf
+9,1,4-Pin Header (Audio Out),J3,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,Conn_Coaxial_x2_Isolated,Header-1x4P-2.54,Generic,C22548,LCSC,0.05$,https://www.lcsc.com/product-detail/Pin-Header-Female-Header_C22548.html
+10,1,Rotary Encoder with Switch,SW1,Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm,RotaryEncoder_Switch,EC11E1224404,ALPS,C25243,LCSC,0.50$,https://www.lcsc.com/product-detail/Encoders_ALPS-EC11E1224404_C25243.html
+11,5,Cherry MX Push Switch,"SW2, SW3, SW5, SW6, SW7",Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB,SW_Push,MX-1.0U,Cherry,Custom,AliExpress,0.25$,https://www.aliexpress.com
+12,2,5.1k Resistor 0603,"R1, R2",Resistor_SMD:R_0603_1608Metric,5.1k,0603WAF5101T5E,UNI-ROYAL,C23186,LCSC,0.005$,https://www.lcsc.com/product-detail/C23186.html
+13,10,10k Resistor 0603,"R3, R6, R7, R8, R10, R13, R14, R15, R16, R17",Resistor_SMD:R_0603_1608Metric,10k,0603WAF1002T5E,UNI-ROYAL,C25804,LCSC,0.005$,https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uni-Royal-Elec-0603WAF1002T5E_C25804.html
+14,2,470R Resistor 0603,"R4, R5",Resistor_SMD:R_0603_1608Metric,470R,0603WAF4700T5E,UNI-ROYAL,C23179,LCSC,0.005$,https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uni-Royal-Elec-0603WAF4700T5E_C23179.html
+15,1,4.7k Resistor 0603,R9,Resistor_SMD:R_0603_1608Metric,4.7k,0603WAF4701T5E,UNI-ROYAL,C23162,LCSC,0.005$,https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uni-Royal-Elec-0603WAF4701T5E_C23162.html
+16,2,1k Resistor 0603,"R11, R12",Resistor_SMD:R_0603_1608Metric,1k,0603WAF1001T5E,UNI-ROYAL,C21190,LCSC,0.005$,https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uni-Royal-Elec-0603WAF1001T5E_C21190.html
+17,2,2.2uF Capacitor 0603,"C1, C6",Capacitor_SMD:C_0603_1608Metric,2.2uF,CL10A225KP8NNNC,SAMSUNG,C15858,LCSC,0.01$,https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG-CL10A225KP8NNNC_C15858.html
+18,2,1uF Capacitor 0603,"C2, C7",Capacitor_SMD:C_0603_1608Metric,1uF,CL10A105KB8NNNC,SAMSUNG,C15849,LCSC,0.01$,https://www.lcsc.com/product-detail/C15849.html
+19,9,100nF Capacitor 0603,"C3, C4, C5, C9, C11, C12, C13, C19, C20",Capacitor_SMD:C_0603_1608Metric,100nF,CL10B104KB8NNNC,SAMSUNG,C14663,LCSC,0.005$,https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG-CL10B104KB8NNNC_C14663.html
+20,2,10uF Capacitor 0603,"C8, C10",Capacitor_SMD:C_0603_1608Metric,10uF,CL10A106MO8NNNC,SAMSUNG,C19702,LCSC,0.02$,https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG-CL10A106MO8NNNC_C19702.html
+21,2,2.2nF Capacitor 0603,"C14, C15",Capacitor_SMD:C_0603_1608Metric,2.2nF,CL10B222KB8NNNC,SAMSUNG,C1600,LCSC,0.005$,https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG-CL10B222KB8NNNC_C1600.html
+22,2,4.7uF Capacitor 0603,"C18, C21",Capacitor_SMD:C_0603_1608Metric,4.7uF,CL10A475KP8NNNC,SAMSUNG,C19666,LCSC,0.01$,https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG-CL10A475KP8NNNC_C19666.html
 
 

@@ -52,6 +52,34 @@ I used KiCad for that (2-layer board design). Display will be connected by cable
 <img width="832" height="697" alt="Snímek obrazovky 2026-08-31 153812" src="https://github.com/user-attachments/assets/87534cd6-b521-4b95-bcd9-e2225ab4cdc1" />
 <img width="617" height="622" alt="Snímek obrazovky 2026-08-31 153729" src="https://github.com/user-attachments/assets/1abbabad-5c10-4fa3-9b09-0eca535af586" />
 
+## Assembly Guide
+
+### 1. PCB Assembly & Soldering
+1. **SMD Components First:** Solder the small SMD parts first (AMS1117 regulator, 0603 capacitors/resistors, USB-C connector, and PCM5102A DAC).
+2. **ESP32 Module:** Align and solder the ESP32-WROOM-32 module onto the board.
+3. **Through-Hole Parts (THT):** Solder the Cherry MX switches, rotary encoder, and dual RCA cinch connector.
+
+### 2. Display Wiring
+* Connect the 2.8" ILI9341 TFT display to the PCB header using cables according to the KiCad schematic (VCC, GND, CS, RESET, DC, SDI/MOSI, SCK, LED).
+
+### 3. Firmware Flashing
+1. Connect the board to your PC via USB-C.
+2. Flash **YoRadio** firmware using PlatformIO / Arduino IDE / Esptool.
+3. Configure your GPIO pin mappings for the display, I2S DAC, rotary encoder, and Cherry MX buttons in `myoptions.h`.
+4. Connect to the radio's Wi-Fi Access Point to set up your home Wi-Fi credentials and station playlist.
+
+### 4. Enclosure Assembly
+1. 3D print the case parts designed in Fusion 360.
+2. Mount the 2.8" TFT display into the front panel slot.
+3. Secure the PCB inside the main case using small M2/M3 screws.
+4. Press keycaps onto the Cherry MX switches and attach the knob to the rotary encoder.
+5. Close the 3D-printed enclosure.
+
+### 5. Hooking up to AIWA
+1. Connect an RCA stereo audio cable from the radio's cinch connectors to the **AUX / Line In** on your AIWA system.
+2. Plug in a standard 5V USB-C power source.
+3. Turn on AIWA, switch mode to AUX, select your favorite station, and enjoy!
+
 ## Software / Firmware
 
 * Built using ESP32 audio framework / **YoRadio** firmware (supporting Web GUI, I2S DAC, and ILI9341 SPI display).

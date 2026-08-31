@@ -51,6 +51,15 @@ I used KiCad for that (2-layer board design). Display will be connected by cable
 
 <img width="832" height="697" alt="Snímek obrazovky 2026-08-31 153812" src="https://github.com/user-attachments/assets/87534cd6-b521-4b95-bcd9-e2225ab4cdc1" />
 <img width="617" height="622" alt="Snímek obrazovky 2026-08-31 153729" src="https://github.com/user-attachments/assets/1abbabad-5c10-4fa3-9b09-0eca535af586" />
+<img width="657" height="596" alt="Snímek obrazovky 2026-09-01 002420" src="https://github.com/user-attachments/assets/4481f678-9466-40c7-bc8f-cd3c85b9a40e" />
+
+
+##  3D Printing Settings
+
+* **Material:** PETG (recommended) or PLA
+* **Layer Height:** 0.2 mm
+* **Infill:** 15–20% (Gyroid or Grid)
+* **Supports:** Needed only for RCA and USB-C cutouts on the rear panel
 
 ## Assembly Guide
 
@@ -83,6 +92,11 @@ I used KiCad for that (2-layer board design). Display will be connected by cable
 ## Software / Firmware
 
 * Built using ESP32 audio framework / **YoRadio** firmware (supporting Web GUI, I2S DAC, and ILI9341 SPI display).
+
+## Credits & Acknowledgments
+
+* Firmware powered by **YoRadio** / `ESP32-audioI2S` library.
+
 
 ## License
 

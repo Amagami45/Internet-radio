@@ -21,3 +21,15 @@ It's done by dac i12c chip and by 2 RCA cinches, which connects to AIWA.
 1 ESP32 wroom (with Bluetooth and WIFI)
 ## License
 This work is under GNU license. More info in license file.
+## Schematics
+I used kicad for that.
+<img width="1154" height="786" alt="Snímek obrazovky 2026-08-17 105338" src="https://github.com/user-attachments/assets/a1a39087-8d16-4bc7-9614-82eba44727d7" />
+## PCB Design
+I used Kicad for that. Display will be conncted by cables that's why it is like it is.
+<img width="918" height="792" alt="Snímek obrazovky 2026-08-31 152727" src="https://github.com/user-attachments/assets/8e8164eb-494c-4786-8286-402895675334" />
+## 3d PCB renders
+From Kicad. All other parts are on my fusion 360 3D model.
+<img width="832" height="697" alt="Snímek obrazovky 2026-08-31 153812" src="https://github.com/user-attachments/assets/87534cd6-b521-4b95-bcd9-e2225ab4cdc1" />
+<img width="617" height="622" alt="Snímek obrazovky 2026-08-31 153729" src="https://github.com/user-attachments/assets/8412b2f6-7363-4fba-85a4-0f400c2b847b" />
+
+

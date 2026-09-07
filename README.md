@@ -91,11 +91,11 @@ I used KiCad for that (2-layer board design). Display will be connected by cable
 
 ## Software / Firmware
 
-* Built using ESP32 audio framework / **YoRadio** firmware (supporting Web GUI, I2S DAC, and ILI9341 SPI display).
+* Built using my button preferences myprofile.h compressed with **YoRadio** firmware (supporting Web GUI, I2S DAC, and ILI9341 SPI display).
 
 ## Credits & Acknowledgments
 
-* Firmware powered by **YoRadio** / `ESP32-audioI2S` library.
+* Firmware powered by **YoRadio** library.
 
 
 ## License

@@ -164,13 +164,30 @@ I used KiCad for that (2-layer board design). Display will be connected by cable
   * **RXD (Pin 20)** $\leftarrow$ **IO1 (TXD)** z ESP32 (přes rezistor R12 1kΩ)
   * **DTR / RTS** $\rightarrow$ Připojeno na tranzistory **Q1/Q2 (BC847)** pro automatické přepínání do programovacího režimu (EN a IO0).
  
-## Software / Firmware
+## Software a Firmware
 
-* Built using my button preferences myprofile.h compressed with **YoRadio** firmware (supporting Web GUI, I2S DAC, and ILI9341 SPI display).
+Firmware rádia je postaven na platformě **ESP32** (Arduino IDE / PlatformIO) a zajišťuje plynulý příjem internetových streamů přes Wi-Fi, jejich dekódování a digitální zpracování zvuku[cite: 1, 2].
 
+### Hlavní funkce
+* **Wi-Fi konektivita:** Automatické připojení k definované síti při startu zařízení.
+* **Audio streaming (I2S):** Přímé digitální vysílání audio dat přes I2S rozhraní do DAC převodníku PCM5102 pro vysokou kvalitu zvuku[cite: 1].
+* **Správa stanic:** Přednastavený seznam českých i zahraničních rádiových stanic (MP3/AAC streamy) s možností cyklického přepínání[cite: 1].
+* **Nastavení hlasitosti:** Jemné digitální řízení hlasitosti přímo v audio dekodéru.
+
+### Mapování ovládacích prvků
+Ovládání probíhá pomocí tlačítek a rotačního enkodéru propojených s GPIO piny ESP32[cite: 1]:
+* **SW3 (BTN_UP):** Přepnutí na následující rádiovou stanici[cite: 1].
+* **SW2 (BTN_DOWN):** Přepnutí na předchozí rádiovou stanici[cite: 1].
+* **SW5 (BTN_LEFT):** Snížení hlasitosti[cite: 1].
+* **SW7 (BTN_RIGHT):** Zvýšení hlasitosti[cite: 1].
+* **SW1 (Enkodér):** Určeno pro navigaci v menu a doplňkové funkce[cite: 1].
+
+### Použité knihovny
+* **WiFi.h** – Správa bezdrátového připojení k síti.
+* **ESP32-audioI2S** – Knihovna pro dekódování audia a obsluhu I2S komunikace.
 ## Credits & Acknowledgments
 
-* Firmware powered by **YoRadio** library.
+* Firmware powered by **ESP32-audioI2S** and **WiFi.h** library.
 
 
 ## License

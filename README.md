@@ -54,7 +54,7 @@ I used KiCad for that (2-layer board design). Display will be connected by cable
 <img width="657" height="596" alt="Snímek obrazovky 2026-09-01 002420" src="https://github.com/user-attachments/assets/4481f678-9466-40c7-bc8f-cd3c85b9a40e" />
 
 
-##  3D Printing Settings
+## 3D Printing Settings
 
 * **Material:** PETG (recommended) or PLA
 * **Layer Height:** 0.2 mm
@@ -90,101 +90,102 @@ I used KiCad for that (2-layer board design). Display will be connected by cable
 3. Turn on AIWA, switch mode to AUX, select your favorite station, and enjoy!
 
 
-# Zapojení komponent (Pinout & Connections)
+# Pinout & Connections
 
-## 1. Displej ILI9341 (U4)
-| Displej ILI9341 | ESP32 (U1) / Napájení | Poznámka |
+## 1. ILI9341 Display (U4)
+| ILI9341 Display | ESP32 (U1) / Power | Note |
 | :--- | :--- | :--- |
-| **VCC** | +3.3V | Napájení logic/displeje |
-| **GND** | GND | Zem |
-| **CS** | **IO0** (DISP_CS) | Chip Select displeje |
+| **VCC** | +3.3V | Logic / Display Power |
+| **GND** | GND | Ground |
+| **CS** | **IO0** (DISP_CS) | Display Chip Select |
 | **D/C** | **IO16** (D/C) | Data / Command |
 | **MOSI** | **IO23** | SPI MOSI |
 | **MISO** | **IO19** | SPI MISO |
-| **SCK** | **IO18** | SPI Hodiny |
-| **LED** | **IO17** (LED) | Řízení podsvícení |
-| **RESET** | **RESET** (přes D/C / RESET síť) | Reset displeje |
+| **SCK** | **IO18** | SPI Clock |
+| **LED** | **IO17** (LED) | Backlight Control |
+| **RESET** | **RESET** (via D/C / RESET network) | Display Reset |
 
 ---
 
 ## 2. Micro SD Card Slot (J2)
-| Micro SD Slot | Zdroj / ESP32 (U1) | Poznámka |
+| Micro SD Slot | Power Source / ESP32 (U1) | Note |
 | :--- | :--- | :--- |
-| **VDD (Pin 4)** | +3.3V | Napájení SD karty |
-| **GND (Pin 3, 6)** | GND | Zem |
-| **DAT3/CD (Pin 2)** | **IO12** (SD_CS) / **IO5** | Chip Select (pull-up R6 10kΩ) |
+| **VDD (Pin 4)** | +3.3V | SD Card Power |
+| **GND (Pin 3, 6)** | GND | Ground |
+| **DAT3/CD (Pin 2)** | **IO12** (SD_CS) / **IO5** | Chip Select (10kΩ pull-up R6) |
 | **CMD (Pin 3)** | **IO23** | SPI MOSI |
 | **CLK (Pin 5)** | **IO18** | SPI SCK |
-| **DAT0 (Pin 7)** | **IO19** | SPI MISO (pull-up R16 10kΩ) |
-| **DAT1 (Pin 8)** | — | Pull-up R17 (10kΩ) na +3.3V |
-| **DAT2 (Pin 1)** | — | Pull-up R15 (10kΩ) na +3.3V |
+| **DAT0 (Pin 7)** | **IO19** | SPI MISO (10kΩ pull-up R16) |
+| **DAT1 (Pin 8)** | — | 10kΩ pull-up R17 to +3.3V |
+| **DAT2 (Pin 1)** | — | 10kΩ pull-up R15 to +3.3V |
 
 ---
 
 ## 3. Audio DAC PCM5102 (U3)
-| PCM5102 Pin | ESP32 (U1) / Napájení | Funkce / Poznámka |
+| PCM5102 Pin | ESP32 (U1) / Power | Function / Note |
 | :--- | :--- | :--- |
-| **CPVDD, DVDD, AVDD** | +3.3V | Napájení DACu (filtrováno C3, C4, C5) |
-| **GND, AGND, DGND** | GND | Zem |
+| **CPVDD, DVDD, AVDD** | +3.3V | DAC Power (filtered by C3, C4, C5) |
+| **GND, AGND, DGND** | GND | Ground |
 | **LRCK (Pin 15)** | **IO25** | I2S Word Select (LRCK) |
 | **DIN (Pin 14)** | **IO27** | I2S Data Input |
 | **BCK (Pin 13)** | **IO26** | I2S Bit Clock |
-| **SCK (Pin 12)** | GND | Systémové hodiny (propojeno na GND) |
-| **OUTL (Pin 6)** | Výstup C3 / R5 / J3A | Audio výstup levý kanál (Coaxial J3A) |
-| **OUTR (Pin 7)** | Výstup C1 / R4 / J3B | Audio výstup pravý kanál (Coaxial J3B) |
+| **SCK (Pin 12)** | GND | System Clock (connected to GND) |
+| **OUTL (Pin 6)** | C3 / R5 / J3A Output | Left Channel Audio Output (Coaxial J3A) |
+| **OUTR (Pin 7)** | C1 / R4 / J3B Output | Right Channel Audio Output (Coaxial J3B) |
 
 ---
 
-## 4. Rotační enkodér s tlačítkem (SW1)
-| Enkodér Pin | ESP32 (U1) / Napájení | Poznámka |
+## 4. Rotary Encoder with Button (SW1)
+| Encoder Pin | ESP32 (U1) / Power | Note |
 | :--- | :--- | :--- |
-| **A (Pin A)** | **IO32** | Fáze A enkodéru |
-| **B (Pin B)** | **IO33** | Fáze B enkodéru |
-| **C (Pin C)** | GND | Společný pin enkodéru |
-| **S1 (Pin S1)** | **IO18** | Tlačítko enkodéru |
-| **S2 (Pin S2)** | GND | Druhá strana tlačítka enkodéru |
+| **A (Pin A)** | **IO32** | Encoder Phase A |
+| **B (Pin B)** | **IO33** | Encoder Phase B |
+| **C (Pin C)** | GND | Encoder Common Pin |
+| **S1 (Pin S1)** | **IO18** | Encoder Switch / Button |
+| **S2 (Pin S2)** | GND | Encoder Switch Other Side |
 
 ---
 
-## 5. Tlačítka (Control Buttons)
-| Tlačítko | ESP32 Pin | Zapojení |
+## 5. Control Buttons
+| Button | ESP32 Pin | Connection |
 | :--- | :--- | :--- |
-| **SW2** | **IO23** / **IO5** | Tlačítko na GND (spíná k GND) |
-| **SW3** | **IO22** | Tlačítko na GND (spíná k GND) |
-| **SW5** | **IO15** (přes R12 1kΩ) | Tlačítko na GND (spíná k GND) |
-| **SW6** | **EN** | RESET tlačítko (spíná EN k GND) |
-| **SW7** | **IO3 (RXD)** (přes R8/R11) | Uživatelské / boot tlačítko |
+| **SW2** | **IO23** / **IO5** | Pushbutton to GND (switches to GND) |
+| **SW3** | **IO22** | Pushbutton to GND (switches to GND) |
+| **SW5** | **IO15** (via 1kΩ R12) | Pushbutton to GND (switches to GND) |
+| **SW6** | **EN** | RESET button (switches EN to GND) |
+| **SW7** | **IO3 (RXD)** (via R8/R11) | User / Boot Button |
 
 ---
 
-## 6. USB-C UART převodník (CP2102N - U5) & Napájení
-* **USB konektor (J1):** Přivádí VBUS (+5V) do stabilizátoru **AMS1117-3.3 (U2)**, který vyrábí hlavní napájení **+3.3V** pro celý obvod.
-* **Převodník CP2102N (U5):**
-  * **TXD (Pin 21)** $\rightarrow$ **IO3 (RXD)** na ESP32 (přes rezistor R11 1kΩ)
-  * **RXD (Pin 20)** $\leftarrow$ **IO1 (TXD)** z ESP32 (přes rezistor R12 1kΩ)
-  * **DTR / RTS** $\rightarrow$ Připojeno na tranzistory **Q1/Q2 (BC847)** pro automatické přepínání do programovacího režimu (EN a IO0).
- 
-## Software a Firmware
+## 6. USB-C UART Converter (CP2102N - U5) & Power Supply
+* **USB Connector (J1):** Supplies VBUS (+5V) to the **AMS1117-3.3 (U2)** regulator, which generates the main **+3.3V** power supply for the entire circuit.
+* **Converter CP2102N (U5):**
+  * **TXD (Pin 21)** $\rightarrow$ **IO3 (RXD)** on ESP32 (via 1kΩ resistor R11)
+  * **RXD (Pin 20)** $\leftarrow$ **IO1 (TXD)** from ESP32 (via 1kΩ resistor R12)
+  * **DTR / RTS** $\rightarrow$ Connected to **Q1/Q2 (BC847)** transistors for automatic programming mode switching (EN and IO0).
 
-Firmware rádia je postaven na platformě **ESP32** (Arduino IDE / PlatformIO) a zajišťuje plynulý příjem internetových streamů přes Wi-Fi, jejich dekódování a digitální zpracování zvuku[cite: 1, 2].
+## Software & Firmware
 
-### Hlavní funkce
-* **Wi-Fi konektivita:** Automatické připojení k definované síti při startu zařízení.
-* **Audio streaming (I2S):** Přímé digitální vysílání audio dat přes I2S rozhraní do DAC převodníku PCM5102 pro vysokou kvalitu zvuku[cite: 1].
-* **Správa stanic:** Přednastavený seznam českých i zahraničních rádiových stanic (MP3/AAC streamy) s možností cyklického přepínání[cite: 1].
-* **Nastavení hlasitosti:** Jemné digitální řízení hlasitosti přímo v audio dekodéru.
+The radio firmware is built on the **ESP32** platform (Arduino IDE / PlatformIO) and ensures smooth reception of internet streams via Wi-Fi, their decoding, and digital audio processing.
 
-### Mapování ovládacích prvků
-Ovládání probíhá pomocí tlačítek a rotačního enkodéru propojených s GPIO piny ESP32[cite: 1]:
-* **SW3 (BTN_UP):** Přepnutí na následující rádiovou stanici[cite: 1].
-* **SW2 (BTN_DOWN):** Přepnutí na předchozí rádiovou stanici[cite: 1].
-* **SW5 (BTN_LEFT):** Snížení hlasitosti[cite: 1].
-* **SW7 (BTN_RIGHT):** Zvýšení hlasitosti[cite: 1].
-* **SW1 (Enkodér):** Určeno pro navigaci v menu a doplňkové funkce[cite: 1].
+### Key Features
+* **Wi-Fi Connectivity:** Automatic connection to the configured network at system startup.
+* **Audio Streaming (I2S):** Direct digital audio data transmission over the I2S interface to the PCM5102 DAC for high sound quality.
+* **Station Management:** Pre-configured playlist of domestic and foreign radio stations (MP3/AAC streams) with sequential switching.
+* **Volume Control:** Fine digital volume control directly inside the audio decoder.
 
-### Použité knihovny
-* **WiFi.h** – Správa bezdrátového připojení k síti.
-* **ESP32-audioI2S** – Knihovna pro dekódování audia a obsluhu I2S komunikace.
+### Control Mapping
+Control is handled via buttons and a rotary encoder connected to the ESP32 GPIO pins:
+* **SW3 (BTN_UP):** Switch to the next radio station.
+* **SW2 (BTN_DOWN):** Switch to the previous radio station.
+* **SW5 (BTN_LEFT):** Volume down.
+* **SW7 (BTN_RIGHT):** Volume up.
+* **SW1 (Encoder):** Menu navigation and additional features.
+
+### Included Libraries
+* **WiFi.h** – Network connection and wireless management.
+* **ESP32-audioI2S** – Audio decoding and I2S communication handling.
+
 ## Credits & Acknowledgments
 
 * Firmware powered by **ESP32-audioI2S** and **WiFi.h** library.
@@ -193,4 +194,3 @@ Ovládání probíhá pomocí tlačítek a rotačního enkodéru propojených s 
 ## License
 
 This work is under GNU license. More info in LICENSE file.
-

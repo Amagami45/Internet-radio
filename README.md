@@ -89,6 +89,81 @@ I used KiCad for that (2-layer board design). Display will be connected by cable
 2. Plug in a standard 5V USB-C power source.
 3. Turn on AIWA, switch mode to AUX, select your favorite station, and enjoy!
 
+
+# Zapojení komponent (Pinout & Connections)
+
+## 1. Displej ILI9341 (U4)
+| Displej ILI9341 | ESP32 (U1) / Napájení | Poznámka |
+| :--- | :--- | :--- |
+| **VCC** | +3.3V | Napájení logic/displeje |
+| **GND** | GND | Zem |
+| **CS** | **IO0** (DISP_CS) | Chip Select displeje |
+| **D/C** | **IO16** (D/C) | Data / Command |
+| **MOSI** | **IO23** | SPI MOSI |
+| **MISO** | **IO19** | SPI MISO |
+| **SCK** | **IO18** | SPI Hodiny |
+| **LED** | **IO17** (LED) | Řízení podsvícení |
+| **RESET** | **RESET** (přes D/C / RESET síť) | Reset displeje |
+
+---
+
+## 2. Micro SD Card Slot (J2)
+| Micro SD Slot | Zdroj / ESP32 (U1) | Poznámka |
+| :--- | :--- | :--- |
+| **VDD (Pin 4)** | +3.3V | Napájení SD karty |
+| **GND (Pin 3, 6)** | GND | Zem |
+| **DAT3/CD (Pin 2)** | **IO12** (SD_CS) / **IO5** | Chip Select (pull-up R6 10kΩ) |
+| **CMD (Pin 3)** | **IO23** | SPI MOSI |
+| **CLK (Pin 5)** | **IO18** | SPI SCK |
+| **DAT0 (Pin 7)** | **IO19** | SPI MISO (pull-up R16 10kΩ) |
+| **DAT1 (Pin 8)** | — | Pull-up R17 (10kΩ) na +3.3V |
+| **DAT2 (Pin 1)** | — | Pull-up R15 (10kΩ) na +3.3V |
+
+---
+
+## 3. Audio DAC PCM5102 (U3)
+| PCM5102 Pin | ESP32 (U1) / Napájení | Funkce / Poznámka |
+| :--- | :--- | :--- |
+| **CPVDD, DVDD, AVDD** | +3.3V | Napájení DACu (filtrováno C3, C4, C5) |
+| **GND, AGND, DGND** | GND | Zem |
+| **LRCK (Pin 15)** | **IO25** | I2S Word Select (LRCK) |
+| **DIN (Pin 14)** | **IO27** | I2S Data Input |
+| **BCK (Pin 13)** | **IO26** | I2S Bit Clock |
+| **SCK (Pin 12)** | GND | Systémové hodiny (propojeno na GND) |
+| **OUTL (Pin 6)** | Výstup C3 / R5 / J3A | Audio výstup levý kanál (Coaxial J3A) |
+| **OUTR (Pin 7)** | Výstup C1 / R4 / J3B | Audio výstup pravý kanál (Coaxial J3B) |
+
+---
+
+## 4. Rotační enkodér s tlačítkem (SW1)
+| Enkodér Pin | ESP32 (U1) / Napájení | Poznámka |
+| :--- | :--- | :--- |
+| **A (Pin A)** | **IO32** | Fáze A enkodéru |
+| **B (Pin B)** | **IO33** | Fáze B enkodéru |
+| **C (Pin C)** | GND | Společný pin enkodéru |
+| **S1 (Pin S1)** | **IO18** | Tlačítko enkodéru |
+| **S2 (Pin S2)** | GND | Druhá strana tlačítka enkodéru |
+
+---
+
+## 5. Tlačítka (Control Buttons)
+| Tlačítko | ESP32 Pin | Zapojení |
+| :--- | :--- | :--- |
+| **SW2** | **IO23** / **IO5** | Tlačítko na GND (spíná k GND) |
+| **SW3** | **IO22** | Tlačítko na GND (spíná k GND) |
+| **SW5** | **IO15** (přes R12 1kΩ) | Tlačítko na GND (spíná k GND) |
+| **SW6** | **EN** | RESET tlačítko (spíná EN k GND) |
+| **SW7** | **IO3 (RXD)** (přes R8/R11) | Uživatelské / boot tlačítko |
+
+---
+
+## 6. USB-C UART převodník (CP2102N - U5) & Napájení
+* **USB konektor (J1):** Přivádí VBUS (+5V) do stabilizátoru **AMS1117-3.3 (U2)**, který vyrábí hlavní napájení **+3.3V** pro celý obvod.
+* **Převodník CP2102N (U5):**
+  * **TXD (Pin 21)** $\rightarrow$ **IO3 (RXD)** na ESP32 (přes rezistor R11 1kΩ)
+  * **RXD (Pin 20)** $\leftarrow$ **IO1 (TXD)** z ESP32 (přes rezistor R12 1kΩ)
+  * **DTR / RTS** $\rightarrow$ Připojeno na tranzistory **Q1/Q2 (BC847)** pro automatické přepínání do programovacího režimu (EN a IO0).
+ 
 ## Software / Firmware
 
 * Built using my button preferences myprofile.h compressed with **YoRadio** firmware (supporting Web GUI, I2S DAC, and ILI9341 SPI display).

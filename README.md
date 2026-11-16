@@ -73,9 +73,9 @@ I used KiCad for that (2-layer board design). Display will be connected by cable
 
 ### 3. Firmware Flashing
 1. Connect the board to your PC via USB-C.
-2. Flash **YoRadio** firmware using PlatformIO / Arduino IDE / Esptool.
-3. Configure your GPIO pin mappings for the display, I2S DAC, rotary encoder, and Cherry MX buttons in `myoptions.h`.
-4. Connect to the radio's Wi-Fi Access Point to set up your home Wi-Fi credentials and station playlist.
+2. Compile and upload the included ESP32 firmware using PlatformIO / Arduino IDE.
+3. Configure Wi-Fi credentials and radio stations in the source code.
+4. Flash the firmware to the ESP32.
 
 ### 4. Enclosure Assembly
 1. 3D print the case parts designed in Fusion 360.
@@ -185,10 +185,11 @@ Control is handled via buttons and a rotary encoder connected to the ESP32 GPIO 
 ### Included Libraries
 * **WiFi.h** – Network connection and wireless management.
 * **ESP32-audioI2S** – Audio decoding and I2S communication handling.
+* **TFT_eSPI** - Display.
 
 ## Credits & Acknowledgments
 
-* Firmware powered by **ESP32-audioI2S** and **WiFi.h** library.
+* Firmware powered by **ESP32-audioI2S**, **WiFi.h** and **TFT_eSPI** library.
 
 
 ## License

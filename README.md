@@ -51,7 +51,8 @@ I used KiCad for that (2-layer board design). Display will be connected by cable
 
 <img width="832" height="697" alt="Snímek obrazovky 2026-08-31 153812" src="https://github.com/user-attachments/assets/87534cd6-b521-4b95-bcd9-e2225ab4cdc1" />
 <img width="617" height="622" alt="Snímek obrazovky 2026-08-31 153729" src="https://github.com/user-attachments/assets/1abbabad-5c10-4fa3-9b09-0eca535af586" />
-<img width="657" height="596" alt="Snímek obrazovky 2026-09-01 002420" src="https://github.com/user-attachments/assets/4481f678-9466-40c7-bc8f-cd3c85b9a40e" />
+<img width="967" height="688" alt="Snímek obrazovky 2026-11-17 114407" src="https://github.com/user-attachments/assets/4dbef52f-4661-4fb0-9d05-b7a69fe82f90" />
+
 
 
 ## 3D Printing Settings
@@ -80,7 +81,7 @@ I used KiCad for that (2-layer board design). Display will be connected by cable
 ### 4. Enclosure Assembly
 1. 3D print the case parts designed in Fusion 360.
 2. Mount the 2.8" TFT display into the front panel slot.
-3. Secure the PCB inside the main case using small M2/M3 screws.
+3. Secure the PCB inside the main case using small square nut.
 4. Press keycaps onto the Cherry MX switches and attach the knob to the rotary encoder.
 5. Close the 3D-printed enclosure.
 

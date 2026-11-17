@@ -81,7 +81,7 @@ I used KiCad for that (2-layer board design). Display will be connected by cable
 ### 4. Enclosure Assembly
 1. 3D print the case parts designed in Fusion 360.
 2. Mount the 2.8" TFT display into the front panel slot.
-3. Secure the PCB inside the main case using small square nut.
+3. Secure the PCB inside the main case using a square nut mounting system.
 4. Press keycaps onto the Cherry MX switches and attach the knob to the rotary encoder.
 5. Close the 3D-printed enclosure.
 
@@ -168,6 +168,9 @@ I used KiCad for that (2-layer board design). Display will be connected by cable
 ## Software & Firmware
 
 The radio firmware is built on the **ESP32** platform (Arduino IDE / PlatformIO) and ensures smooth reception of internet streams via Wi-Fi, their decoding, and digital audio processing.
+
+- Station Library: The radio comes pre-configured with approximately 20 radio stations. Most of them are Czech stations that I and my family regularly listen to, but several international stations are also included.
+
 
 ### Key Features
 * **Wi-Fi Connectivity:** Automatic connection to the configured network at system startup.
